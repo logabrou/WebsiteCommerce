@@ -1,0 +1,77 @@
+  <!DOCTYPE HTML>
+  <html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:replace="fragments/fragments :: head"></head>
+  <body>
+  <div th:replace="fragments/fragments :: navbar" ></div>
+ 
+  <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+          <div class="container">
+              <h1 class="display-3">Logan's Rhythm</h1>
+              <p>This is a small e-commerce application that allows the user to purchase some of a few products that are offered here. </p>
+              <p><a class="btn btn-primary btn-lg" href="/about.html" role="button">Learn more &raquo;</a></p>
+          </div>
+      </div>
+      
+         <div class="container">
+          <div class="row">
+       		 <div class="card col-md-3 small-product-card"  th:each="product:${products}">
+                    <a  th:href="@{/product/{id}(id=${product.getId()})}"><img th:alt="${product.name}" th:src="@{${product.image}}" class="card-img"/></a>
+                    <div class="card-body">
+                    	<div class="card-title">
+                        	<h4 th:text="${product.name}"></h4>
+                        	<small th:text="${product.getBrand()}"></small>
+                    	</div>
+                	</div>    
+        		</div>
+    		</div>
+  		</div> 
+  </main>
+ 
+  <footer th:replace="fragments/fragments :: footer"></footer>
+  </body>
+  </html>
+
+
+
+    <!--  		<div class="card" style="width: 18rem;">
+		 	 	<img src="snare1.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Snare</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+		 		</div>
+		 	</div>
+		 	<div class="card" style="width: 18rem;">
+		 	 	<img src="Images/snare2.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Snare</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+		 	</div>
+		 	<div class="card" style="width: 18rem;">
+		 	 	<img src="..." class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+		 	</div>
+		 	<div class="card" style="width: 18rem;">
+			  <img src="Images/drumset.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				  <ul class="list-group list-group-flush">
+				    <li class="list-group-item">Cras justo odio</li>
+				    <li class="list-group-item">Dapibus ac facilisis in</li>
+				    <li class="list-group-item">Vestibulum at eros</li>
+				  </ul>
+				  <div class="card-body">
+				    <a href="#" class="card-link">Card link</a>
+				    <a href="#" class="card-link">Another link</a>
+			  </div>
+			</div>
+			</div>
+  		</div>  -->

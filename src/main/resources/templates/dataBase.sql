@@ -1,0 +1,3 @@
+insert into product (id, brand, category, description, image, name, price, quantity) values (1, 'Luettgen-Douglas', 'Quality-focused', 'Curabitur in libero ut massa volutpat convallis.', 'http://dummyimage.com/182x128.png/cc0000/ffffff', 'nec dui luctus', 20, 92);
+insert into product (id, brand, category, description, image, name, price, quantity) values (2, 'Koelpin, Schiller and Veum', 'Synchronised', 'Morbi vel lectus in quam fringilla rhoncus.', 'http://dummyimage.com/161x163.png/dddddd/000000', 'sit amet', 18, 2);
+insert into product (id, brand, category, description, image, name, price, quantity) values (3, 'Batz Group', 'upward-trending', 'Suspendisse potenti.', 'http://dummyimage.com/134x239.png/cc0000/ffffff', 'ultrices', 92, 72);
